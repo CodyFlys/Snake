@@ -66,7 +66,6 @@ body {
   height: 4%;
   background-color: white;
   z-index: 1;
-  scale: 1;
 }
 
 #score {
@@ -160,6 +159,25 @@ body {
   z-index: 3;
 }
 
+@media only screen and (max-width: 1000px) {
+  .game-area {
+    position: relative;
+    margin: auto;
+    width: 50rem;
+    height: 50rem;
+    border: 2px solid #000;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 1rem;
+    border-radius: 25px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-flow: column-reverse;
+    justify-content: center;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .game-area {
     position: relative;
@@ -171,10 +189,6 @@ body {
     margin-bottom: 1rem;
     border-radius: 25px;
   }
-
-  /* #rules {
-    display: none;
-  } */
 
   .wrapper {
     display: flex;
