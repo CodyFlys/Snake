@@ -2,6 +2,9 @@ import React, { Component, useState } from 'react';
 import Snake from './Components/Snake';
 import Food from './Components/Food';
 
+
+let start = new Boolean(false);
+
 const getRandomCoordinates = () => {
   let min = 1;
   let max = 96;
@@ -28,11 +31,16 @@ class App extends Component {
     this.state = initialState;
     this.Restart = this.Restart.bind(this);
     this.endGame = this.endGame.bind(this);
+    this.startGame = this.startGame.bind(this);
+    this.menu = this.menu.bind(this);
   }
 
   componentDidMount() {
-    setInterval(this.moveSnake, this.state.speed);
-    document.onkeydown = this.onKeyDown;
+    if(start == true){
+      this.startGame();
+    } else if (start == false){
+      this.menu();
+    }
   }
 
   componentDidUpdate() {
@@ -75,6 +83,7 @@ class App extends Component {
     }
   }
   moveSnake = () => {
+    let moving = new Boolean(true);
     let dots = [...this.state.snakeDots];
     let head = dots[dots.length -1]; // our head
 
@@ -150,6 +159,25 @@ class App extends Component {
     }
   }
 
+  startGame() {
+    start = !start;
+    document.onkeydown = this.onKeyDown;
+    setInterval(this.moveSnake, this.state.speed);
+    let y = document.getElementById('game-start')
+    y.style.display = 'none';
+    let s = document.getElementById('score')
+    s.style.display = 'block';
+    this.setState(initialState)
+  }
+
+  menu() {
+    document.onkeyup = null;
+    let y = document.getElementById('game-start')
+    let s = document.getElementById('score')
+    s.style.display = 'none';
+    y.style.display = 'block';
+  }
+
   onGameOver() {
     let x = document.getElementById("game-over");
     let z = document.getElementById("replay");
@@ -194,13 +222,17 @@ class App extends Component {
           <h1 className="title">SNAKE</h1>
           <div className="game-area">
 
+          <div id="game-start">
+              <button id="play" onClick={this.startGame}>PLAY</button>
+            </div>
+
             <div id="game-over">
               <h1>GAME OVER</h1>
               <button id="replay" onClick={this.Restart}>REPLAY</button>
             </div>
 
 
-            <h1 className="score">SCORE: {this.state.score}</h1>
+            <h1 id="score">SCORE: {this.state.score}</h1>
             <Snake snakeDots={this.state.snakeDots}/>
             <Food dot={this.state.food}/>
           </div>

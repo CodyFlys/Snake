@@ -69,7 +69,7 @@ body {
   scale: 1;
 }
 
-.score {
+#score {
   font-family: monospace;
   text-align: center;
   position: relative;
@@ -90,6 +90,24 @@ body {
   display: flex;
   justify-content: center;
   margin: auto;
+  padding: 1rem;
+  width: 50%;
+  border: none;
+  color: black;
+  font-size: 1rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2.5px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  z-index: 3;
+}
+
+#play {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 25%;
   padding: 1rem;
   width: 50%;
   border: none;
