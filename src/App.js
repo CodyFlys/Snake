@@ -210,7 +210,7 @@ class App extends Component {
     return (
       <div className="wrapper">
 
-        <div className="rules">
+        <div id="rules">
         <h1> - RULES -</h1>
         <h3> - Eat the red dots.</h3>
         <h3> - Don't eat your self!</h3>

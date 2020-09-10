@@ -1,6 +1,6 @@
 body {
   color: white;
-  background-color: rgb(27, 29, 29);
+  background-color: rgb(36, 36, 36);
   overflow: hidden;
 }
 
@@ -26,7 +26,7 @@ body {
   margin-bottom: -2rem;
 }
 
-.rules {
+#rules {
   margin-left: 5%;
   font-family: monospace;
   letter-spacing: 2.5px;
@@ -158,4 +158,27 @@ body {
   background-color: rgb(255, 255, 255);
   position: relative;
   z-index: 3;
+}
+
+@media only screen and (max-width: 600px) {
+  .game-area {
+    position: relative;
+    margin: auto;
+    width: 25rem;
+    height: 25rem;
+    border: 2px solid #000;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 1rem;
+    border-radius: 25px;
+  }
+
+  /* #rules {
+    display: none;
+  } */
+
+  .wrapper {
+    display: flex;
+    flex-flow: column-reverse;
+    justify-content: center;
+  }
 }
