@@ -1,0 +1,143 @@
+body {
+  color: white;
+  background-color: rgb(27, 29, 29);
+  overflow: hidden;
+}
+
+
+.wrapper {
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: center;
+}
+
+.title {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 5px;
+  margin-bottom: 1rem;
+}
+
+.sub-title {
+  font-family: monospace;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: -2rem;
+}
+
+.rules {
+  margin-left: 5%;
+  font-family: monospace;
+  letter-spacing: 2.5px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.game-area {
+  position: relative;
+  margin: auto;
+  width: 50rem;
+  height: 50rem;
+  border: 2px solid #000;
+  background-color: rgb(0, 0, 0);
+  margin-bottom: 1rem;
+  border-radius: 25px;
+}
+
+.game-container {
+  display: flex;
+  flex-flow: column;
+}
+
+.snake-dot {
+  position: absolute;
+  width: 4%;
+  height: 4%;
+  background-color: rgb(122, 238, 14);
+  z-index: 2;
+}
+
+.snake-food {
+  position: absolute;
+  width: 4%;
+  height: 4%;
+  background-color: white;
+  z-index: 1;
+  scale: 1;
+}
+
+.score {
+  font-family: monospace;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  color: red;
+}
+
+#game-over {
+  display: none;
+  color: red;
+  font-family: monospace;
+  letter-spacing: 2.5px;
+  justify-content: center;
+  text-align: center;
+}
+
+#replay {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 1rem;
+  width: 50%;
+  border: none;
+  color: black;
+  font-size: 1rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2.5px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  z-index: 3;
+}
+
+#replay:hover {
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 1rem;
+  width: 50%;
+  border: none;
+  color: black;
+  font-size: 1.6rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 3px;
+  border-radius: 5px;
+  background-color: rgb(218, 22, 22);
+  position: relative;
+  z-index: 3;
+}
+
+#replay:active {
+  transition: all .0s ease-out;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 1rem;
+  width: 50%;
+  border: none;
+  color: black;
+  font-size: 1.6rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 3px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  z-index: 3;
+}
