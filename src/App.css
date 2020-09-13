@@ -17,6 +17,7 @@ body {
   text-align: center;
   letter-spacing: 5px;
   margin-bottom: 1rem;
+  color: rgb(34, 34, 34);
 }
 
 .sub-title {
@@ -34,17 +35,17 @@ body {
   flex-flow: column;
   justify-content: center;
   text-align: center;
+  color: rgb(34, 34, 34);
 }
 
 .game-area {
   position: relative;
   margin: auto;
-  width: 50rem;
-  height: 50rem;
-  border: 2px solid #000;
-  background-color: rgb(0, 0, 0);
+  width: 30rem;
+  height: 30rem;
+  border: 5px solid #000;
+  background-color: rgb(144, 177, 91);
   margin-bottom: 1rem;
-  border-radius: 25px;
 }
 
 .game-container {
@@ -56,7 +57,7 @@ body {
   position: absolute;
   width: 4%;
   height: 4%;
-  background-color: rgb(122, 238, 14);
+  background-color: rgb(34, 34, 34);
   z-index: 2;
 }
 
@@ -64,7 +65,7 @@ body {
   position: absolute;
   width: 4%;
   height: 4%;
-  background-color: white;
+  background-color: rgb(34, 34, 34);
   z-index: 1;
 }
 
@@ -73,12 +74,12 @@ body {
   text-align: center;
   position: relative;
   z-index: 3;
-  color: red;
+  color: rgb(34, 34, 34);
 }
 
 #game-over {
   display: none;
-  color: red;
+  color: rgb(34, 34, 34);
   font-family: monospace;
   letter-spacing: 2.5px;
   justify-content: center;
@@ -91,15 +92,16 @@ body {
   margin: auto;
   padding: 1rem;
   width: 50%;
-  border: none;
-  color: black;
+  border: 5px solid black;
+  color: rgb(34, 34, 34);
   font-size: 1rem;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   letter-spacing: 2.5px;
   border-radius: 5px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(119, 146, 75);
   position: relative;
   z-index: 3;
+  outline: none;
 }
 
 #play {
@@ -109,15 +111,16 @@ body {
   margin-top: 25%;
   padding: 1rem;
   width: 50%;
-  border: none;
-  color: black;
+  border: 5px solid black;
+  color: rgb(34, 34, 34);
   font-size: 1rem;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   letter-spacing: 2.5px;
   border-radius: 5px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(119, 146, 75);
   position: relative;
   z-index: 3;
+  outline: none;
 }
 
 #replay:hover {
@@ -130,31 +133,13 @@ body {
   margin: auto;
   padding: 1rem;
   width: 50%;
-  border: none;
+  border: 5px solid black;
   color: black;
   font-size: 1.6rem;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   letter-spacing: 3px;
   border-radius: 5px;
-  background-color: rgb(218, 22, 22);
-  position: relative;
-  z-index: 3;
-}
-
-#replay:active {
-  transition: all .0s ease-out;
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  padding: 1rem;
-  width: 50%;
-  border: none;
-  color: black;
-  font-size: 1.6rem;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  letter-spacing: 3px;
-  border-radius: 5px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(105, 129, 66);
   position: relative;
   z-index: 3;
 }
@@ -165,10 +150,9 @@ body {
     margin: auto;
     width: 50rem;
     height: 50rem;
-    border: 2px solid #000;
-    background-color: rgb(0, 0, 0);
+    border: 5px solid #000;
+    background-color: rgb(144, 177, 91);
     margin-bottom: 1rem;
-    border-radius: 25px;
   }
 
   .wrapper {

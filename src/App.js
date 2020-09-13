@@ -2,7 +2,6 @@ import React, { Component, useState } from 'react';
 import Snake from './Components/Snake';
 import Food from './Components/Food';
 
-
 let start = new Boolean(false);
 
 const getRandomCoordinates = () => {
@@ -155,7 +154,7 @@ class App extends Component {
 
   increaseSpeed() {
     if (this.state.speed > 50) {
-      return this.state.speed - 5;
+      return this.state.speed - 2.5;
     }
   }
 
