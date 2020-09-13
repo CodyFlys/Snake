@@ -109,8 +109,32 @@ class App extends Component {
 
   checkIfOutOfBorders() {
     let head = this.state.snakeDots[this.state.snakeDots.length - 1]; // find our head
-    if (head[0] >= 100 || head[1] >= 100 || head[0] < 0 || head[1] < 0) {
-      this.onGameOver();
+    // if (head[0] >= 100 || head[1] >= 100 || head[0] < 0 || head[1] < 0) {
+    //   this.onGameOver();
+    // }
+    
+    if (head[0] >= 100) {
+      let newSnakeDots = this.state.snakeDots
+      newSnakeDots[newSnakeDots.length - 1][0] = 0
+      this.setState({...this.state, snakeDots : newSnakeDots });
+    }
+
+    if (head[1] >= 100) {
+      let newSnakeDots = this.state.snakeDots
+      newSnakeDots[newSnakeDots.length - 1][1] = 0
+      this.setState({...this.state, snakeDots : newSnakeDots });
+    }
+
+    if (head[0] < 0) {
+      let newSnakeDots = this.state.snakeDots
+      newSnakeDots[newSnakeDots.length - 1][0] = 96
+      this.setState({...this.state, snakeDots : newSnakeDots });
+    }
+
+    if (head[1] < 0) {
+      let newSnakeDots = this.state.snakeDots
+      newSnakeDots[newSnakeDots.length - 1][1] = 96
+      this.setState({...this.state, snakeDots : newSnakeDots });
     }
   }
 
