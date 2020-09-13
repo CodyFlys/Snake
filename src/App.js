@@ -178,7 +178,7 @@ class App extends Component {
 
   increaseSpeed() {
     if (this.state.speed > 50) {
-      return this.state.speed - 2.5;
+      return this.state.speed - 3.5;
     }
   }
 
@@ -235,7 +235,7 @@ class App extends Component {
 
         <div id="rules">
         <h1> - RULES -</h1>
-        <h3> - Eat the white dots.</h3>
+        <h3> - Eat the dots.</h3>
         <h3> - Don't eat your self!</h3>
         <h3 className="sub-title"> BY<br/> CODY SOLOMON</h3>
 
